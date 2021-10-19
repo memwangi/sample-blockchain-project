@@ -28,8 +28,9 @@ export class Block {
 
         do {
             hash = this.calculateHash(++nonce);
-        } while (hash.startsWith('00') === false);
+        } while (hash.startsWith('0000') === false);
 
+		
         return {nonce, hash};
     }
 }

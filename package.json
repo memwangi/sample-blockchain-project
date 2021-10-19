@@ -1,19 +1,24 @@
 {
-  "name": "tooling",
+  "name": "blockchain_project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "serve",
+    "compileDeploy": "tsc && npm run deploy",
+    "deploy": "copyfiles -f src/browser/*.html src/browser/*.css dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joseph Mugo",
   "license": "ISC",
   "dependencies": {
     "tslint": "^6.1.3",
     "typescript": "^4.4.4"
   },
   "devDependencies": {
-    "@types/node": "^16.11.0"
+    "@types/node": "^16.11.0",
+    "serve": "^12.0.0",
+    "copyfiles": "2.4.1"
   }
 }
